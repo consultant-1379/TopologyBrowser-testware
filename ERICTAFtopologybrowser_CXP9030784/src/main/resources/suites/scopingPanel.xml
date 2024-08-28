@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Scoping Panel - ROP Stars">
+    <test name="Test Scoping Panel in provided application">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.InternalScenarios">
+                <methods>
+                    <include name = "setScopingPanelTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,2 @@
+networkElementId,nodeType,port,transportType,secureUserName,secureUserPassword,platformType
+LTE02ERBS00001,ERBS,22,SSH,netsim,netsim,CPP

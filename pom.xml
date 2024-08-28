@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Each team will need to update the following section to reflect the
+        correct parent for their test cases -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- -->
+        <!-- -->
+        <taf_version>2.63.1</taf_version>
+        <taf_sdk>all</taf_sdk>
+        <!-- -->
+        <enm-test-library-bom.version>1.2.182</enm-test-library-bom.version>
+        <!-- -->
+    </properties>
+    <!-- Each team will need to update the following section with the correct
+        information -->
+   <dependencyManagement>
+       <dependencies>
+           <dependency>
+               <groupId>com.ericsson.oss.testware.bom</groupId>
+               <artifactId>enm-test-library-bom</artifactId>
+               <version>${enm-test-library-bom.version}</version>
+               <type>pom</type>
+               <scope>import</scope>
+           </dependency>
+       </dependencies>
+   </dependencyManagement>
+    <groupId>com.ericsson.nms.pres.taf</groupId>
+    <artifactId>TopologyBrowser-testware</artifactId>
+    <version>1.71.4-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <scm>
+        <tag>TopologyBrowser-testware-1.56.1</tag>
+    </scm>
+    <modules>
+        <module>ERICTAFtopologybrowser_CXP9030784</module>
+        <module>test-pom</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.15</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>6.1.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.ericsson.cds</groupId>
+                        <artifactId>checkstyle-module</artifactId>
+                        <version>1.1.20</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <consoleOutput>true</consoleOutput>
+                    <logViolationsToConsole>true</logViolationsToConsole>
+                    <configLocation>/cds/cds-checkstyle.xml</configLocation>
+                    <violationSeverity>warning</violationSeverity>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <!-- Change this (to false, or remove) if you do NOT want Checkstyle to fail your build -->
+                            <failOnViolation>true</failOnViolation>
+                        </configuration>
+                        <id>check-style</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- This plugin configuration exists to override nms pom and ignore antlr generated sources -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <configuration combine.self="override">
+                    <rulesets>
+                        <ruleset>
+                            https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/content/groups/public/com/ericsson/nms/TOR_pmd_ruleset/2.0/TOR_pmd_ruleset-2.0.xml
+                        </ruleset>
+                    </rulesets>
+                    <targetJdk>${target.java.version}</targetJdk>
+                    <excludeRoots>
+                        <excludeRoot>generated</excludeRoot>
+                    </excludeRoots>
+                    <includeTests>false</includeTests>
+                    <sourceEncoding>utf-8</sourceEncoding>
+                    <failOnViolation>false</failOnViolation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

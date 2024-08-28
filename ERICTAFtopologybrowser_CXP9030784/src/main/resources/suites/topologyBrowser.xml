@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Topology Browser - ROP Stars">
+
+
+    <test name="Topology Browser RFA loop">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.CoreScenarios"/>
+        </classes>
+    </test>
+
+
+</suite>

@@ -1,0 +1,6 @@
+username,firstName,lastName,email,password,enabled,roles,numOfRetries,timeBetweenRetries
+ropstars,rop,stars,rop@stars.ie,Rops1234,true,ADMINISTRATOR,3,5000
+ropstarsOp,ropy,starsOp,ropy@starsOp.ie,Rops1234,true,Topology_Browser_Operator,3,5000
+
+
+

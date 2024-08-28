@@ -1,0 +1,5 @@
+sampler_label,aggregate_report_count,average,aggregate_report_median,aggregate_report_90%_line,aggregate_report_min,aggregate_report_max,aggregate_report_error%,aggregate_report_rate,aggregate_report_bandwidth
+Login,20,448,431,456,415,713,0.0,0.0612655001715434,0.06916300605303143
+Fetch Leaf Collection PoIds,70,533,437,1031,238,1158,0.0,0.010428804118602916,0.7905992308440374
+Fetch Leaf Collection MOs,60,2320,2231,2531,1971,5688,0.016666666666666666,0.009885913265610434,2.4806322794819353
+TOTAL,150,1237,547,2362,238,5688,0.006666666666666667,0.019893962527201676,2.703560236382052

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="GAT/Taf/ScopingPanel - ROP Stars" parallel="tests" thread-count="1">
+    <test name="Gat">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.GatScenarios"/>
+        </classes>
+    </test>
+    <test name="Core taf">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.CoreScenarios"/>
+        </classes>
+    </test>
+    <test name="ScopingPanel">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.InternalScenarios"/>
+        </classes>
+    </test>
+</suite>

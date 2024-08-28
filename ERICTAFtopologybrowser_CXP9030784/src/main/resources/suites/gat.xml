@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="GAT - ROP Stars">
+    <test name="GAT RFA loop">
+        <classes>
+            <class name="com.ericsson.nms.pres.taf.test.cases.GatScenarios"/>
+        </classes>
+    </test>
+</suite>

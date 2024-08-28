@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.nms.pres.taf</groupId>
+        <artifactId>TopologyBrowser-testware</artifactId>
+        <version>1.71.4-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.ericsson.nms.pres.taf.testware</groupId>
+    <artifactId>ERICTAFtopologybrowser_CXP9030784</artifactId>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-bom</artifactId>
+                <version>${taf_version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.testware.bom</groupId>
+                <artifactId>enm-test-library-bom</artifactId>
+                <version>${enm-test-library-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>all-taf-sdk</artifactId>
+            <version>${taf_version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.testware.topologybrowser</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.testware.topologybrowser</groupId>
+            <artifactId>TopologyBrowserUI</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.testware.topologybrowser</groupId>
+            <artifactId>PersistentObjectService</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.testware.cm</groupId>
+            <artifactId>node-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.oss.testware.security</groupId>
+            <artifactId>identity-management-rest-operators</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.oss.testware.network</groupId>
+            <artifactId>network-element-interaction</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>${target.java.version}</source>
+                        <target>${target.java.version}</target>
+                        <showDeprecation>true</showDeprecation>
+                        <showWarnings>true</showWarnings>
+                        <compilerArgs>
+                            <arg>-Xlint:all</arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

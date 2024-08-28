@@ -1,0 +1,2 @@
+unionNamespace,unionMoType,unionVersion,unionListMembersLength,unionListMembers1Type,unionListMembers2Type
+"urn:rdns:com:ericsson:oammodel:ericsson-acl-ipos","context$$policy$$access-list$$seq","1.0.2",2,"ENUM_REF","SHORT"

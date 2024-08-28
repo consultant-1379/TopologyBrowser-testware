@@ -1,0 +1,2 @@
+BooleanName,StringName,StringValue,StringAltValue,IntName,IntValue,IntAltValue,ENUMName,ENUMValue,ENUMALTValue,ComplexName,ComplexFieldsNames,ComplexFieldsValues,ComplexFieldsAltValues
+checkEmergencySoftLock,userLabel,testString,testAltString,biasThpWifiMobility,11,10,dnsLookupOnTai,OFF,ON,x2BlackList,"enbId,mcc,mnc,mncLength","1000,55,55,3","1001,54,54,2"

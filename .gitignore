@@ -1,0 +1,20 @@
+# Glogal .gitignore #
+.tmp
+# Eclipse related files
+.settings
+.classpath
+.project
+
+# InteliJ files #
+worskpace.xml
+.idea/
+*.iml
+
+# Sublime files #
+*.sublime-project
+*.sublime-workspace
+
+# Build Folders
+target/
+test-output/
+tmp/
